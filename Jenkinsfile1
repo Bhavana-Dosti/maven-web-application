@@ -30,7 +30,7 @@ stage('Execute'){
 sh "${mavenHome}/bin/mvn sonar:sonar"
 
 }
-
+/*
 stage('UploadArtifactsIntoNexus'){
 
 sh "${mavenHome}/bin/mvn deploy"
@@ -44,6 +44,7 @@ sshagent(['62858bb4-2db7-49ea-9190-af6929d199c4']) {
 }
 }
 */
+
 }//try closing
 
 catch(e){
