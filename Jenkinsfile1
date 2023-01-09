@@ -30,7 +30,7 @@ stage('Execute'){
 sh "${mavenHome}/bin/mvn sonar:sonar"
 
 }
-/*
+
 stage('UploadArtifactsIntoNexus'){
 
 sh "${mavenHome}/bin/mvn deploy"
@@ -39,11 +39,11 @@ sh "${mavenHome}/bin/mvn deploy"
 
 stage('DeployIntoTomcatServer'){
 
-sshagent(['d1811330-e50d-4874-92e4-938264430131']) {
+sshagent(['62858bb4-2db7-49ea-9190-af6929d199c4']) {
     sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.3.73:/opt/apache-tomcat-9.0.70/webapps"
 }
 }
-*/
+
 
 }//try closing
 
